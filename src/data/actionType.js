@@ -1,0 +1,11 @@
+
+export const INIT = "INIT";
+export const SET_USER = "SET_USER";
+
+
+export const OPEN_SIDEBAR_CART_MODAL = "OPEN_SIDEBAR_CART_MODAL";
+export const OPEN_SIGNIN_MODAL = "OPEN_SIGNIN_MODAL";
+export const OPEN_ADD_IN_CART_MSG_MODAL = "OPEN_ADD_IN_CART_MSG_MODAL";
+
+export const GET_PRODUCT = "GET_PRODUCT";
+export const GET_USER_CART = "GET_USER_CART";

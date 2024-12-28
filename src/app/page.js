@@ -1,101 +1,75 @@
+
+import CategorySectionDesktop from "@/components/Home/CategoriesSectionDesktop";
+import CategorySection from "@/components/Home/CategorySection";
+import FirstSection from "@/components/Home/FirstSection";
+import LineCategory from "@/components/Home/LineCategory";
+import SwiperProduct from "@/components/Home/Products/SwiperProduct";
+import CartDrawer from "@/components/shared/CartDrawer";
+import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navbar";
 import Image from "next/image";
+import React from 'react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const images = [
+    "https://mobogift.com/cdn/2021/03/26/07-31-41_605df75516c6f.jpg",
+    "https://mobogift.com/cdn/2019/11/11/03-05-48_5dc94794e83a1.jpg",
+    "https://mobogift.com/cdn/2019/11/11/02-57-50_5dc945b6263e0.jpg",
+    "https://mobogift.com/cdn/2019/11/11/03-28-01_5dc94cc9a77ca.jpg",
+    "https://mobogift.com/cdn/2023/12/03/06-13-06_656c93fa512dd.jpeg",
+    "https://mobogift.com/cdn/2019/11/16/06-28-29_5dd00e95e3d3f.jpg",
+  ];
+
+
+  return (
+    <>
+
+
+      <Navbar />
+      <FirstSection />
+
+      <div className="bg-gray-100 min-h-screen p-4 max-w-640:block hidden">
+        <h1 className="text-center text-2xl font-bold mb-4 mt-4">تمامی گیفت کارت ها</h1>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+            >
+              <img
+                src={image}
+                alt={`تصویر ${index + 1}`}
+                className="w-full h-32 object-cover"
+              />
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      
+      <CategorySection />
+      <CategorySectionDesktop />
+      <SwiperProduct />
+
+      <div class="container mx-auto p-4">
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full  ">
+            <img src="https://www.bleepstatic.com/content/hl-images/2021/03/18/microsoft-fire.jpg" alt="Card 1 Image" class="w-full h-48 object-cover" />
+
+          </div>
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full  ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMMCFwf618nN0snv_lDyaA4ETSJD97w-BatQ&s" alt="Card 2 Image" class="w-full h-48 object-cover" />
+
+          </div>
+        </div>
+      </div>
+
+      <SwiperProduct />
+      <SwiperProduct />
+      <CartDrawer/>
+      <Footer />
+
+
+    </>
   );
 }
