@@ -1,5 +1,5 @@
 {
-    "apiLink":"http://localhost:5000",
+    "apiLink":"https://access.arastdev.ir",
     "staticFile":"https://arastme.s3-website.ir-thr-at1.arvanstorage.ir/"
 
 }

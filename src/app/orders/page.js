@@ -14,14 +14,14 @@ const Orders = () => {
           orderId: "12345",
           total: "500,000 تومان",
           items: [
-            { name: "محصول ۱", price: "200,000 تومان", image: "http://localhost:5000/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
-            { name: "محصول ۲", price: "150,000 تومان", image: "http://localhost:5000/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
-            { name: "محصول ۳", price: "150,000 تومان", image: "http://localhost:5000/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
-            { name: "محصول ۳", price: "150,000 تومان", image: "http://localhost:5000/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
+            { name: "محصول ۱", price: "200,000 تومان", image: "https://access.arastdev.ir/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
+            { name: "محصول ۲", price: "150,000 تومان", image: "https://access.arastdev.ir/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
+            { name: "محصول ۳", price: "150,000 تومان", image: "https://access.arastdev.ir/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
+            { name: "محصول ۳", price: "150,000 تومان", image: "https://access.arastdev.ir/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
 
-            { name: "محصول ۳", price: "150,000 تومان", image: "http://localhost:5000/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
+            { name: "محصول ۳", price: "150,000 تومان", image: "https://access.arastdev.ir/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
 
-            { name: "محصول ۳", price: "150,000 تومان", image: "http://localhost:5000/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
+            { name: "محصول ۳", price: "150,000 تومان", image: "https://access.arastdev.ir/uploads/products/1735113895021-Screenshot_9-12-2024_13727_flowbite.com.jpeg" },
 
           ],
         },
