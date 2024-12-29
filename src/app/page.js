@@ -29,7 +29,7 @@ export default function Home() {
       <Navbar />
       <FirstSection />
 
-      <div className="bg-gray-100 min-h-screen p-4 max-w-640:block hidden">
+      <div className="bg-gray-100 mb-20 p-4 max-w-640:block hidden">
         <h1 className="text-center text-2xl font-bold mb-4 mt-4">تمامی گیفت کارت ها</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {images.map((image, index) => (

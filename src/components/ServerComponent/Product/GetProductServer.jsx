@@ -306,7 +306,7 @@ const handleOptionChange = (optionId, value) => {
 
 
                 <div className="bg-white -mt-16" dir="rtl">
-                    <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+                    <div className="mx-auto max-w-2xl px-4 py-16 max-w-420:py-5 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
                         <div className="mx-auto max-w-3xl text-center">
                             <h2 className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">آسان ترین روش خرید را داشته باشید</h2>
                             <p className="mt-4 text-gray-500">
@@ -350,14 +350,14 @@ const handleOptionChange = (optionId, value) => {
 
 
 
-                <div className={`fixed inset-x-0 bottom-0 flex pl-12 pr-12 flex-col justify-between gap-4 bg-green-100 p-6 shadow ring-1 ring-gray-900/10 md:flex-row md:items-center transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-full"
+                <div className={`fixed inset-x-0 bottom-0 flex pl-12 pr-12 flex-col justify-between gap-4 bg-green-100 p-6 shadow ring-1 ring-gray-900/10 md:flex-row md:items-center max-w-640:mb-[60px] max-w-420:pr-4 max-w-420:pl-4 transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-full"
                     }`}>
                     {/* بخش چپ */}
                     <div className="flex flex-row items-center gap-4">
 
 
                         {/* دکمه‌های با آیکون */}
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 max-w-640:hidden">
                             <button
                                 type="button"
                                 className="rounded-full bg-gray-200 p-2 text-gray-700 hover:bg-gray-300 focus:outline-none"
@@ -386,11 +386,11 @@ const handleOptionChange = (optionId, value) => {
                             افزودن به سبد خرید
                         </button>
                         {/* قیمت */}
-                        <div className="text-2xl font-bold text-red-900" dir="rtl">{Number(initialProduct.MinPriceIRR).toLocaleString('fa-IR')} تومان</div>
+                        <div className="text-2xl font-bold text-red-900 max-w-640:flex-auto" dir="rtl">{Number(initialProduct.MinPriceIRR).toLocaleString('fa-IR')} تومان</div>
                     </div>
 
                     {/* بخش راست */}
-                    <div className="text-right">
+                    <div className="text-right max-w-640:hidden">
                         <p className="text-2xl font-medium text-gray-900">{initialProduct.ProductName}</p>
                         <p className="text-xs text-gray-500">{initialProduct.ProductEnglishName}</p>
                     </div>
@@ -404,6 +404,9 @@ const handleOptionChange = (optionId, value) => {
 
         <CartDrawer />
         <Footer />
+        <br/>
+        <br/>
+        <br/>
     </>);
 }
 

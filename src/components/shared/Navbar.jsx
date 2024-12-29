@@ -76,7 +76,7 @@ const Navbar = () => {
             </button>
 
             {user.ServerToken !== null ? (<>
-              <a className="hover:text-gray-400" href="/account">
+              <a className="hover:text-gray-400" href="/profile">
                 <img src="/icons/user.svg" className="w-6 h-6" />
               </a>
 

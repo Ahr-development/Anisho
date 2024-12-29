@@ -79,7 +79,7 @@ const navigation = {
     ],
 }
 
-export default function Footer() {
+export default function FooterMode2() {
     const controller = useSelector((state) => state.IModalController);
     const dispatch = useDispatch();
     
@@ -89,58 +89,10 @@ export default function Footer() {
   
     return (
         <>
-            <div className="bg-white" dir="rtl">
-                <div className="mx-auto max-w-7xl px-6 py-24 sm:py-20 lg:flex lg:items-center lg:justify-between lg:px-8">
-                    <div className="space-y-4">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl max-w-420:text-center">
-                            نماد اعتماد الکترونیکی
-                        </h2>
-                        <p className="text-lg text-gray-600 max-w-420:text-center">
-                            ضمانت کننده اعتماد شما به تیم ماست
-                        </p>
-                    </div>
-                    <div className="mt-10 flex items-center justify-center lg:mt-0 lg:flex-shrink-0">
-                        <img
-                            src="https://dmngo.ir/wp-content/uploads/2022/01/enamad-1.png"
-                            alt="First Image"
-                            className="w-48 max-w-420:w-36 object-cover rounded-lg shadow-lg"
-                        />
-                        <img
-                            src="https://dmngo.ir/wp-content/uploads/2022/01/enamad-1.png"
-                            alt="Second Image"
-                            className="w-48 max-w-420:w-36 object-cover rounded-lg shadow-lg"
-                        />
-                    </div>
-                </div>
-            </div>
+       
 
 
-
-            <footer className="bg-gray-900 max-w-640:hidden">
-                <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-14 lg:px-8">
-                    <nav aria-label="Footer" className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
-                        {navigation.main.map((item) => (
-                            <div key={item.name} className="pb-6">
-                                <a href={item.href} className="text-xl leading-6 text-gray-600 hover:text-white">
-                                    {item.name}
-                                </a>
-                            </div>
-                        ))}
-                    </nav>
-                    <div className="mt-10 flex justify-center space-x-10">
-                        {navigation.social.map((item) => (
-                            <a key={item.name} href={item.href} className="text-gray-400 hover:text-white">
-                                <span className="sr-only">{item.name}</span>
-                                <item.icon aria-hidden="true" className="h-6 w-6" />
-                            </a>
-                        ))}
-                    </div>
-                    <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-                        &copy; 2020 Your Company, Inc. All rights reserved.
-                    </p>
-                </div>
-            </footer>
-
+     
 
             <div className="fixed bottom-0 gap-5 left-0 w-full bg-gray-900 shadow-md border-t border-gray-300 flex justify-around items-center py-2 invisible max-w-640:visible z-10">
                 {/* آیتم‌های منو */}

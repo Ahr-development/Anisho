@@ -58,6 +58,8 @@ module.exports = {
         'max-w-493': {'raw': '(max-width: 493px)'},
         'max-w-480': {'raw': '(max-width: 480px)'},
         'max-w-430': {'raw': '(max-width: 430px)'},
+        'max-w-420': {'raw': '(max-width: 420px)'},
+
         'max-w-391': {'raw': '(max-width: 391px)'},
         'min-w-390': {'raw': '(min-width: 390px)'},
         'max-w-375': {'raw': '(max-width: 375px)'},
