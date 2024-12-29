@@ -2,6 +2,7 @@
 'use client'
 
 import { setModalCartControllerAction } from "@/data/Actions/InitAppActions";
+import Link from "next/link";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -96,7 +97,7 @@ export default function FooterMode2() {
 
             <div className="fixed bottom-0 gap-5 left-0 w-full bg-gray-900 shadow-md border-t border-gray-300 flex justify-around items-center py-2 invisible max-w-640:visible z-10">
                 {/* آیتم‌های منو */}
-                <a className="flex flex-col items-center text-white hover:text-blue-500" href="/profile">
+                <Link className="flex flex-col items-center text-white hover:text-blue-500" href="/profile">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -118,8 +119,8 @@ export default function FooterMode2() {
                     </svg>
 
                     <span className="text-xs">پروفایل</span>
-                </a>
-                <a className="flex flex-col items-center text-white hover:text-blue-500" href="/">
+                </Link>
+                <Link className="flex flex-col items-center text-white hover:text-blue-500" href="/">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -141,7 +142,7 @@ export default function FooterMode2() {
                     </svg>
 
                     <span className="text-xs mt-1">صفحه اصلی</span>
-                </a>
+                </Link>
                 <button className="flex flex-col items-center text-white hover:text-blue-500">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
