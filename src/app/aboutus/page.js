@@ -1,64 +1,180 @@
 
-
-
+'use client'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { useEffect, useState } from "react";
+import SwiperProduct from "@/components/Home/Products/SwiperProduct";
+import MainPage from "@/components/Home/Containers/MainPage";
+import GamePage from "@/components/Home/Containers/GamePage";
+import SoftwarePage from "@/components/Home/Containers/SoftwarePage";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 const AboutUs = () => {
-    return (<>
 
-        <h1>HI</h1>
-        <div id="authentication-modal" aria-hidden="true" class="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-sm bg-black bg-opacity-50" dir="rtl">
-            <div class="relative w-full max-w-md px-4 h-full md:h-auto ">
-                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                    <div class="flex justify-start p-2">
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 mr-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
+    const [page, setPage] = useState(0);
+    const [container, setContainer] = useState(null);
+
+    useEffect(() => {
+        switch (page) {
+            case 0:
+                setContainer(<MainPage />)
+                break;
+            case 1:
+                setContainer(<SoftwarePage />)
+                break;
+            case 2:
+                setContainer(<GamePage />)
+                break;
+
+            default:
+                break;
+        }
+    }, [])
+
+    const handleSetPage = (page) => {
+        switch (page) {
+            case 0:
+                setContainer(<MainPage />)
+                setPage(0)
+                break;
+            case 1:
+                setContainer(<SoftwarePage />)
+                setPage(1)
+
+                break;
+            case 2:
+                setContainer(<GamePage />)
+                setPage(2)
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
+
+    const slides = [
+        "https://via.placeholder.com/600x400?text=Slide+1",
+        "https://via.placeholder.com/600x400?text=Slide+2",
+        "https://via.placeholder.com/600x400?text=Slide+3",
+      ];
+
+
+    return (<div className={page == 1 ? "bg-white" : page == 2 ? "bg-gray-900" : "bg-amber-50"}>
+
+
+        <Navbar />
+        <div className="relative h-16 w-full flex items-center overflow-hidden max-w-767:hidden">
+            {/* پس‌زمینه سمت چپ (سیاه با کجی) */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: "black",
+                    clipPath: "polygon(0 0, 48% 0, 52% 100%, 0% 100%)",
+                }}
+            ></div>
+
+            {/* پس‌زمینه سمت راست (قرمز با کجی) */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: "#ed4539",
+                    clipPath: "polygon(48% 0, 100% 0, 100% 100%, 52% 100%)",
+                }}
+            ></div>
+
+            {/* محتوای اصلی */}
+            <div className="relative flex w-full items-center z-10">
+                {/* بخش سمت چپ */}
+                <button onClick={() => handleSetPage(1)} className="basis-1/2 flex flex-col items-center group relative overflow-hidden">
+                    <h1 className="text-white text-2xl relative z-20">دنیای نرم افزار</h1>
+                    {/* آیکون‌ها */}
+                    <div className="absolute bottom-[-50px] flex space-x-4 opacity-0 group-hover:bottom-10 group-hover:opacity-60 transition-all duration-700 ease-out">
+                        <i className="text-white text-3xl">🖥️</i>
+                        <i className="text-white text-3xl">💻</i>
+                        <i className="text-white text-3xl">📱</i>
                     </div>
+                </button>
 
-                    <form class="space-y-6 px-6 lg:px-8 pb-10 sm:pb-10 xl:pb-8 " action="#">
-                        <h3 class="text-2xl font-medium text-gray-900 mt-2 dark:text-white">ورود به حساب</h3>
-                        <div>
-                            <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">شماره تلفن شما</label>
-                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required="" />
-                        </div>
+                {/* لوگو */}
+                <div className="basis-1/4 flex justify-center relative z-20">
+                    <img
+                        src="/img/logo.png"
+                        className="w-24"
+                        style={{
+                            background: "transparent",
+                        }}
+                    />
+                </div>
+
+                {/* بخش سمت راست */}
+                <button onClick={() => handleSetPage(2)} className="basis-1/2 flex flex-col items-center group relative overflow-hidden">
+                    <h1 className="text-white text-2xl relative  z-20">دنیای گیمینگ</h1>
+                    {/* آیکون‌ها */}
+                    <div className="absolute bottom-[-50px] flex space-x-4 opacity-0 group-hover:bottom-10 group-hover:opacity-60 transition-all duration-700 ease-out">
+                        <i className="text-white text-3xl">🎮</i>
+                        <i className="text-white text-3xl">🕹️</i>
+                        <i className="text-white text-3xl">🎲</i>
+                    </div>
+                </button>
+
+            </div>
+        </div>
 
 
-                        <button type="submit" class="w-full text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">ورود به حساب</button>
 
-                    </form>
+        <div className="fixed bottom-0 left-1/2 max-w-640:bottom-[56px] z-10 max-w-767:block hidden transform -translate-x-1/2 h-16 w-3/4 flex items-center overflow-hidden">
+            {/* پس‌زمینه سمت چپ (سیاه با کجی) */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: "black",
+                    clipPath: "polygon(0 0, 48% 0, 52% 100%, 0% 100%)",
+                }}
+            ></div>
+
+            {/* پس‌زمینه سمت راست (قرمز با کجی) */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: "#ed4539",
+                    clipPath: "polygon(48% 0, 100% 0, 100% 100%, 52% 100%)",
+                }}
+            ></div>
+
+            {/* محتوای اصلی */}
+            <div className="relative flex w-full items-center z-10">
+                {/* متن سمت چپ */}
+                <div onClick={() => handleSetPage(1)} className="basis-1/2 flex justify-center">
+                    <h1 className="text-white text-sm">دنیای نرم افزار</h1>
+                </div>
+
+                {/* لوگو */}
+                <div className="basis-1/4 flex justify-center relative z-20">
+                    <img
+                        src="/img/logo.png"
+                        className="w-16"
+                        style={{
+                            background: "transparent",
+                        }}
+                    />
+                </div>
+
+                {/* متن سمت راست */}
+                <div onClick={() => handleSetPage(2)} className="basis-1/2 flex justify-center">
+                    <h1 className="text-white text-sm">دنیای گیمینگ</h1>
                 </div>
             </div>
         </div>
 
 
-        <div id="authentication-modal" aria-hidden="true" class="fixed inset-0 z-50 flex justify-center items-center" dir="rtl">
-            <div class="relative w-full max-w-md px-4 h-full md:h-auto">
-                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                    <div class="flex justify-start p-2">
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 mr-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
 
-                    <form class="space-y-6 px-6 lg:px-8 pb-4 sm:pb-10 xl:pb-8" action="#">
-                        <h3 class="text-2xl font-medium text-gray-900 mt-2 dark:text-white">ورود به حساب</h3>
-                        <div>
-                            <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">شماره تلفن شما</label>
-                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required="" />
-                        </div>
+        {container}
 
+        <Footer />
 
-                        <button type="submit" class="w-full text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">ورود به حساب</button>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </>);
+    </div>);
 }
 
 export default AboutUs;

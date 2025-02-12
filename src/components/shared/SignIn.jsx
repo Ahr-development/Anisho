@@ -57,11 +57,23 @@ const SignIn = () => {
                                 <h3 class="text-2xl font-medium text-gray-900 mt-2 dark:text-white">ورود به حساب</h3>
                                 <div>
                                     <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">شماره تلفن شما</label>
-                                    <input onChange={(e) => setMobile(e.target.value)}   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="09920000001" required="" />
+                                    <input onChange={(e) => setMobile(e.target.value)} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="09920000001" required="" />
                                 </div>
 
 
-                                <button  onClick={handleSendNumber} class="w-full text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">ورود به حساب</button>
+                                <button onClick={handleSendNumber} class="w-full text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">ورود به حساب</button>
+                                <div class="flex  justify-center  space-x-6 mt-4">
+
+                                    <button class="flex items-center px-6 mr-5 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 focus:outline-none">
+                                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-black-icon.png" alt="Google logo" class="w-6 h-6 mr-2" />
+                                        ورود با گوگل
+                                    </button>
+                                    <button class="flex items-center px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 focus:outline-none">
+                                        <img src="https://img.icons8.com/ios_filled/512/microsoft.png" alt="Google logo" class="w-6 h-6 mr-2" />
+                                        ورود با مایکروسافت
+                                    </button>
+                                </div>
+
 
                             </div>
 

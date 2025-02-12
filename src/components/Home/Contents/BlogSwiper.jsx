@@ -1,3 +1,4 @@
+
 'use client';
 
 // components/ProductCarousel.js
@@ -14,7 +15,7 @@ const products = [
 
 ];
 
-const SwiperProduct = () => {
+const BlogSwiper = () => {
     return (
         <>
 
@@ -32,10 +33,10 @@ const SwiperProduct = () => {
                     <button className="text-xl font-semibold text-gray-600">→</button>
                 </div>
                 <div className="flex items-center">
-                    <span className="text-2xl font-semibold text-white ">
-                        محصولات موزیک
+                    <span className="text-2xl font-semibold text-gray ">
+                        آنیشو بلاگ - اخبار بروز استور ها
                     </span>
-                    <span className="text-xl text-gray-600 ml-5">بهترین</span>
+                    <span className="text-xl text-gray-600 ml-5">خبرگزاری</span>
                 </div>
             </div>
 
@@ -69,22 +70,18 @@ const SwiperProduct = () => {
                     }}
                     loop={true}
                     pagination={{ clickable: true }}
-                    navigation={true}
                 >
                     {products.map((product) => (
                         <SwiperSlide key={product.id}>
-                            <div class="card">
-
-                                <div class="imgBox">
-                                    <img src="https://upload.wikimedia.org/wikipedia/en/9/96/Ellie_in_The_Last_of_Us_Part_II.png" alt="mouse corsair" class="mouse" />
+                            <div class="w-80 p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                                <img class="w-full h-40 object-cover rounded-t-lg" alt="Card Image" src="https://accsell.ir/uploads/image/rootimage/2280/4234f5dce4dfc9ad9645e7f8d5c7dec6.webp?w=382&h=382&q=90" />
+                                <div class="p-4" dir='rtl'>
+                                    <h2 class="text-xl  font-semibold">ادعای گوگل نسبت به تحریم ایرانی ها</h2>
+                                    <p class="text-gray-600">در حال حاضر اخطار هایی از سمت گوگل پلی استور و گوگل کنسول مبنی بر اخطار احراز هویت</p>
+                                    <div class="flex justify-between items-center mt-4">
+                                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">خواندن خبر</button>
+                                    </div>
                                 </div>
-
-                                <div class="contentBox">
-                                    <h3>{product.name}</h3>
-                                    <h2 class="price" dir='rtl'>{product.price} تومان</h2>
-                                    <a href="#" class="buy">افزودن به سبد خرید</a>
-                                </div>
-
                             </div>
                         </SwiperSlide>
                     ))}
@@ -93,4 +90,4 @@ const SwiperProduct = () => {
     );
 };
 
-export default SwiperProduct;
+export default BlogSwiper;

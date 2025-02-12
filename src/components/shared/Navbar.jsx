@@ -68,7 +68,7 @@ const Navbar = () => {
         className={`bg-gray-800 text-white z-10 w-full py-3 ${isSticky ? "fixed top-0  left-0 shadow-md transition-all duration-300" : "relative"
           }`}
       >
-        <div className="container hidden md:flex mx-auto items-center justify-between py-2 px-2  ">
+        <div className="container hidden md:flex mx-auto items-center justify-between py-3 px-2  ">
           {/* سمت چپ: آیکون‌ها */}
           <div className="flex items-center space-x-6 md:absolute md:left-4 pl-8">
             <button className="hover:text-gray-400" onClick={() => handleOpenCart()}>
@@ -91,10 +91,6 @@ const Navbar = () => {
 
           </div>
 
-          {/* لوگو در مرکز */}
-          <div className="text-xl font-bold mx-auto text-center">
-            <a href="#">لوگو</a>
-          </div>
 
           {/* منوهای متنی سمت راست */}
           <div className="hidden md:flex items-center space-x-6 md:absolute md:right-4 pr-8">
@@ -114,14 +110,14 @@ const Navbar = () => {
         </div>
 
         {/* حالت موبایل */}
-        <div className="md:hidden flex items-center pt-5 pb-5 justify-between px-6 py-2">
+        <div className="md:hidden flex items-center pt-2 pb-2 justify-between px-6 ">
           {/* آیکون سمت چپ */}
           <button className="hover:text-gray-400" onClick={handleOpenCart}>
             <img src="/icons/cart.svg" className="w-6 h-6" />
           </button>
           {/* لوگو وسط */}
           <div className="text-xl font-bold text-center">
-            <a href="#">لوگو</a>
+            <img src="/img/logo.png" className="w-[78px] ml-[-34px] absolute top-[-5px] "/>
           </div>
           {/* آیکون سمت راست */}
           <button className="hover:text-gray-400" onClick={() => handleSignIn()}>

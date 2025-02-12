@@ -1,3 +1,4 @@
+
 'use client';
 
 // components/ProductCarousel.js
@@ -14,7 +15,7 @@ const products = [
 
 ];
 
-const SwiperProduct = () => {
+const VideoContentSwiper = () => {
     return (
         <>
 
@@ -32,10 +33,10 @@ const SwiperProduct = () => {
                     <button className="text-xl font-semibold text-gray-600">→</button>
                 </div>
                 <div className="flex items-center">
-                    <span className="text-2xl font-semibold text-white ">
-                        محصولات موزیک
+                    <span className="text-2xl font-semibold text-gray ">
+                        آنیشو بلاگ - اخبار بروز استور ها
                     </span>
-                    <span className="text-xl text-gray-600 ml-5">بهترین</span>
+                    <span className="text-xl text-gray-600 ml-5">خبرگزاری</span>
                 </div>
             </div>
 
@@ -69,23 +70,36 @@ const SwiperProduct = () => {
                     }}
                     loop={true}
                     pagination={{ clickable: true }}
-                    navigation={true}
                 >
                     {products.map((product) => (
                         <SwiperSlide key={product.id}>
-                            <div class="card">
 
-                                <div class="imgBox">
-                                    <img src="https://upload.wikimedia.org/wikipedia/en/9/96/Ellie_in_The_Last_of_Us_Part_II.png" alt="mouse corsair" class="mouse" />
-                                </div>
 
-                                <div class="contentBox">
-                                    <h3>{product.name}</h3>
-                                    <h2 class="price" dir='rtl'>{product.price} تومان</h2>
-                                    <a href="#" class="buy">افزودن به سبد خرید</a>
-                                </div>
 
-                            </div>
+
+
+<div class="max-w-xs rounded overflow-hidden shadow-lg bg-white relative group" >
+
+  <img class="w-full h-48 object-cover transition-all duration-300 group-hover:opacity-50"  src="https://xxboxnews.blob.core.windows.net/prod/sites/2/2024/06/Consoles-eb36182249206cefa827.jpg" alt="Video Thumbnail"/>
+  
+
+  <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-4.57-3.206a1 1 0 00-1.482.832v6.414a1 1 0 001.482.832l4.57-3.206a1 1 0 000-1.664z"/>
+    </svg>
+  </div>
+
+  <div class="absolute bottom-2 right-2 bg-black text-white px-2 py-1 text-sm rounded">
+    10:30
+  </div>
+  
+  <div class="px-4 py-2">
+    <p class="font-semibold text-lg">عنوان ویدئو</p>
+  </div>
+</div>
+
+
+
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -93,4 +107,4 @@ const SwiperProduct = () => {
     );
 };
 
-export default SwiperProduct;
+export default VideoContentSwiper;

@@ -16,22 +16,22 @@ const FirstSection = () => {
     {
       title: "یوتیوب پریمیوم",
       description: "یوتیوب پریمیوم",
-      buttonColor: "bg-red-600",
-      bg: "bg-red-200",
+      buttonColor: "bg-red-900",
+      bg: "bg-red-400",
       img: "https://cdn-icons-png.freepik.com/256/15707/15707874.png?semt=ais_hybrid"
     },
     {
       title: "محصولات پلی استیشن",
       description: "پلی استیشن",
-      buttonColor: "bg-blue-600",
-      bg: "bg-blue-200",
+      buttonColor: "bg-blue-900",
+      bg: "bg-blue-400",
       img: "https://upload.wikimedia.org/wikipedia/commons/9/91/PlayStation_App_Icon.jpg"
     },
     {
       title: "محصولات ایکس باکس",
       description: "گیفت کارت ایکس باکس",
-      buttonColor: "bg-green-600",
-      bg: "bg-green-200",
+      buttonColor: "bg-green-900",
+      bg: "bg-green-400",
       img: "https://cdn.icon-icons.com/icons2/17/PNG/256/microsoft_xbox_xbox360_2158.png"
     },
   ];
@@ -92,7 +92,7 @@ const FirstSection = () => {
             >
               {slideData.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="p-6 border rounded-lg shadow">
+                  <div className="p-6 bg-white border rounded-lg shadow">
                     <img
                       src={slide.img}
                       alt={`Icon ${index + 1}`}
