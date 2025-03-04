@@ -30,28 +30,40 @@ module.exports = {
 
         'min-w-1420': { 'raw': '(min-width: 1420px)' },
         'max-w-1420': { 'raw': '(max-width: 1420px)' },
+        'max-w-1378': { 'raw': '(max-width: 1378px)' },
         'max-w-1350': { 'raw': '(max-width: 1350px)' },
 
         'max-w-1310': { 'raw': '(max-width: 1420px)' },
         'max-w-1255': { 'raw': '(max-width: 1255px)' },
         'min-w-1255': { 'raw': '(min-width: 1255px)' },
+        'max-w-1237': { 'raw': '(max-width: 1237px)' },
 
         'max-w-1185': { 'raw': '(max-width: 1185px)' },
         'max-w-1088': { 'raw': '(max-width: 1088px)' },
         'max-w-1110': { 'raw': '(max-width: 1110px)' },
 
+        'max-w-967': { 'raw': '(max-width: 967px)' },
 
         'max-w-929': { 'raw': '(max-width: 929px)' },
         'max-w-890': { 'raw': '(max-width: 890px)' },
         'min-w-890': { 'raw': '(min-width: 890px)' },
+        'max-w-867': { 'raw': '(max-width: 867px)' },
 
         'max-w-850': { 'raw': '(max-width: 850px)' },
+        'max-w-800': { 'raw': '(max-width: 800px)' },
+
         'max-w-767': { 'raw': '(max-width: 767px)' },
 
         'max-w-761': { 'raw': '(max-width: 761px)' },
+        'max-w-730': { 'raw': '(max-width: 730px)' },
+
         'max-w-702': { 'raw': '(max-width: 702px)' },
         'max-w-672': { 'raw': '(max-width: 672px)' },
         'max-w-640': { 'raw': '(max-width: 640px)' },
+        'max-w-632': { 'raw': '(max-width: 632px)' },
+
+        'max-w-620': { 'raw': '(max-width: 620px)' },
+
         'max-w-600': { 'raw': '(max-width: 600px)' },
 
         'min-w-673': { 'raw': '(min-width: 673px)' },

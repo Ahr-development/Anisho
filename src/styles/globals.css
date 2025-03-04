@@ -16,10 +16,36 @@
 
 }
 
-body {
-  font-family: 'Shabnam', sans-serif;
+
+@font-face {
+  font-family: 'Kalameh';
+  src: url('/assets/font/Kalameh(FaNum)-Light.ttf') format('TrueType'),
 }
 
+@font-face {
+  font-family: 'KalamehBold';
+  src: url('/assets/font/Kalameh(FaNum)-ExtraBold.ttf') format('TrueType'),
+}
+
+
+@font-face {
+  font-family: 'KalamehExtraBold';
+  src: url('/assets/font/Kalameh(FaNum)-Black.ttf') format('TrueType'),
+}
+
+
+
+body {
+  font-family: 'Kalameh', sans-serif;
+}
+
+.kalamehBold{
+  font-family: "KalamehBold";
+}
+
+.kalamehExtraBold{
+  font-family: "KalamehExtraBold";
+}
 
 @keyframes slide-up {
   from {
