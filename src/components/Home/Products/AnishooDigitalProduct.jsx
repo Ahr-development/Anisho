@@ -5,7 +5,7 @@ import "swiper/css";
 
 const Card = ({ image, logo, title, price }) => {
     return (
-        <div className="bg-white rounded-2xl overflow-hidden shadow-md w-80">
+        <div className="bg-white rounded-2xl overflow-hidden shadow-md">
             {/* تصویر اصلی */}
             <div className="relative">
                 <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -81,6 +81,9 @@ const AnishooDigitalProduct = () => {
             slidesPerView={4}
             breakpoints={{
                 300: {
+                    slidesPerView: 1.5,
+                },
+                550: {
                     slidesPerView: 2,
                 },
                 768: {

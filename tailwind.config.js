@@ -32,6 +32,7 @@ module.exports = {
         'max-w-1420': { 'raw': '(max-width: 1420px)' },
         'max-w-1378': { 'raw': '(max-width: 1378px)' },
         'max-w-1350': { 'raw': '(max-width: 1350px)' },
+        'max-w-1320': { 'raw': '(max-width: 1320px)' },
 
         'max-w-1310': { 'raw': '(max-width: 1420px)' },
         'max-w-1255': { 'raw': '(max-width: 1255px)' },
@@ -41,6 +42,7 @@ module.exports = {
         'max-w-1185': { 'raw': '(max-width: 1185px)' },
         'max-w-1088': { 'raw': '(max-width: 1088px)' },
         'max-w-1110': { 'raw': '(max-width: 1110px)' },
+        'max-w-1010': { 'raw': '(max-width: 1010px)' },
 
         'max-w-967': { 'raw': '(max-width: 967px)' },
 
