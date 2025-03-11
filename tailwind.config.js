@@ -71,6 +71,8 @@ module.exports = {
         'min-w-673': { 'raw': '(min-width: 673px)' },
         'max-w-560': { 'raw': '(max-width: 560px)' },
         'min-w-561': { 'raw': '(min-width: 561px)' },
+        'max-w-530': { 'raw': '(max-width: 530px)' },
+
         'max-w-500': { 'raw': '(max-width: 500px)' },
         'max-w-493': { 'raw': '(max-width: 493px)' },
         'max-w-480': { 'raw': '(max-width: 480px)' },
