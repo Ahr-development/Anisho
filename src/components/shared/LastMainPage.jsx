@@ -1,10 +1,17 @@
+import CategorySectionDesktop from "../Home/CategoriesSectionDesktop";
+import CategorySection from "../Home/CategorySection";
+import FirstSection from "../Home/FirstSection";
+import SwiperProduct from "../Home/Products/SwiperProduct";
+import CartDrawer from "./CartDrawer";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 
 
 
 const LastMainPage = () => {
     return ( <>
-          <Navbar />
+      {/*     <Navbar />
           <FirstSection />
     
           <div className="bg-gray-100 mb-20 p-4 max-w-640:block hidden">
@@ -46,7 +53,7 @@ const LastMainPage = () => {
           <SwiperProduct />
           <CartDrawer/>
           <Footer />
-    
+     */}
     
     
     </> );
