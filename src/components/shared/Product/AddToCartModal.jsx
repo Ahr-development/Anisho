@@ -22,35 +22,35 @@ const AddToCartModal = ({ isOpen, onClose, product, timeSub, typeSub }) => {
 
     const handleOptionChange = (optionId, value) => {
         setSelectedOptions((prev) => ({
-          ...prev,
-          [optionId]: value,
+            ...prev,
+            [optionId]: value,
         }));
-      
+
         // محاسبه قیمت براساس گزینه انتخاب شده
         const selectedOption = product.Options.find((option) => option.Id === optionId);
         const selectedSubOption = selectedOption.SubOptions.find(
-          (subOption) => subOption.Id === parseInt(value)
+            (subOption) => subOption.Id === parseInt(value)
         );
-      
-        if (selectedSubOption) {
-          setCalculatedPrice((prevPrice) => {
-            // حذف قیمت گزینه قبلی (اگر وجود داشت)
-            const previousSubOptionId = selectedOptions[optionId];
-            const previousSubOption = selectedOption.SubOptions.find(
-              (subOption) => subOption.Id === parseInt(previousSubOptionId)
-            );
-      
-            return (
-              prevPrice -
-              (previousSubOption ? parseInt(previousSubOption.SubOptionPrice) : 0) +
-              parseInt(selectedSubOption.SubOptionPrice)
-            );
-          });
-        }
-      };
-    
 
-      const handleAddToCart = async () => {
+        if (selectedSubOption) {
+            setCalculatedPrice((prevPrice) => {
+                // حذف قیمت گزینه قبلی (اگر وجود داشت)
+                const previousSubOptionId = selectedOptions[optionId];
+                const previousSubOption = selectedOption.SubOptions.find(
+                    (subOption) => subOption.Id === parseInt(previousSubOptionId)
+                );
+
+                return (
+                    prevPrice -
+                    (previousSubOption ? parseInt(previousSubOption.SubOptionPrice) : 0) +
+                    parseInt(selectedSubOption.SubOptionPrice)
+                );
+            });
+        }
+    };
+
+
+    const handleAddToCart = async () => {
 
         const optionsPayload = Object.entries(selectedOptions).map(([optionId, value]) => ({
             optionId,
@@ -68,7 +68,7 @@ const AddToCartModal = ({ isOpen, onClose, product, timeSub, typeSub }) => {
         };
 
         dispatch(setOpenAddProductCartModalAction(true))
-        const { data } = await AddProductToCartService(optionsPayload, additionalData,timeSub,typeSub)
+        const { data } = await AddProductToCartService(optionsPayload, additionalData, timeSub, typeSub)
     }
 
 
@@ -131,10 +131,10 @@ const AddToCartModal = ({ isOpen, onClose, product, timeSub, typeSub }) => {
 
                 {product.Options.map((element) => (
 
-                    <div className="mb-5">
+                    <div className="mb-5" key={element.Id}>
                         <label className="text-gray-600 font-medium block mb-2"> {element.OptionName} </label>
                         {/* حالت ادیت سلکت باکس */}
-                        <select                                         onChange={(e) => handleOptionChange(element.Id, e.target.value)} // تنظیم مقدار انتخاب‌شده
+                        <select onChange={(e) => handleOptionChange(element.Id, e.target.value)} // تنظیم مقدار انتخاب‌شده
 
                             className="w-full p-3 rounded-lg border border-gray-300 text-gray-700 focus:ring-purple-500 focus:border-purple-500"
                         >
