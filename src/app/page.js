@@ -9,8 +9,13 @@ export default async function Home() {
     productsData = await GetProductsForMainPageService();
   } catch (error) {
     console.error("Failed to fetch product:", error);
-    return <div>Failed to fetch products.</div>;
-  }
+  // خطا رو نمایش بده برای پروداکشن (حذف کن بعدا!)
+  return (
+    <div>
+      <h1>خطا در دریافت اطلاعات</h1>
+      <pre>{JSON.stringify(error, null, 2)}</pre>
+    </div>
+  );  }
 
   // اگر مشکلی نبود، دیتا رو پاس بده به کامپوننت
   return <NewMainPage listProducts={productsData.data} />;
