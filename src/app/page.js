@@ -1,24 +1,27 @@
 import NewMainPage from "@/components/Home/MainPage/NewMainPage";
-import { GetProductsForMainPageService } from "@/data/Services/productService";
 
-export default async function Home() {
-  // سرور مستقیم دیتا رو می‌گیره
-  let productsData = null;
+async function getProducts() {
+  const res = await fetch('https://access.anishoo.com/api/product/getAllProductsForMainPage', {
+    cache: 'no-store', // هر بار درخواست بفرسته، کش نکنه!
+  });
 
-  try {
-    productsData = await GetProductsForMainPageService();
-    return <NewMainPage listProducts={productsData.data} />;
-
-  } catch (error) {
-    console.error("Failed to fetch product:", error);
-    // خطا رو نمایش بده برای پروداکشن (حذف کن بعدا!)
-    return (
-      <div>
-        <h1>خطا در دریافت اطلاعات</h1>
-        <pre>{JSON.stringify(error, null, 2)}</pre>
-      </div>
-    );
+  if (!res.ok) {
+    console.error('Failed to fetch products:', res.status);
+    return null;
   }
 
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
 
+
+export default async function Home() {
+  const products = await getProducts();
+
+  if (!products) {
+    return <div>Failed to fetch products.</div>;
+  }
+
+  return <NewMainPage listProducts={products} />;
 }
