@@ -12,8 +12,11 @@ export const GetProductByIdService = (id) => {
 
 
 
+export const GetProductsForMainPageService = () => {
+    return api.get(`${config.apiLink}/api/product/getAllProductsForMainPage` );
+}
 
 
-export const AddProductToCartService = (optionsPayload, additionalData) => {
-    return api.post(`${config.apiLink}/api/payment/handleAddToCartUser`, JSON.stringify({ optionsPayload, additionalData }));
+export const AddProductToCartService = (optionsPayload, additionalData,timeSub,typeSub) => {
+    return api.post(`${config.apiLink}/api/payment/handleAddToCartUser`, JSON.stringify({ optionsPayload, additionalData,timeSub,typeSub }));
 }

@@ -8,7 +8,7 @@ const ShowImageStatic = (props) => {
     return ( 
 
         <Img className={props.classImage}
-            src={[`${ 'https://access.arastdev.ir/' + props.image}`,"https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg"]}
+            src={[`${ 'https://access.anishoo.com/' + props.image}`,"https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg"]}
             loader={
                 <div className="text-center mx-auto">
                     <BounceLoader loading={true} color={"#4A90E2"}  />    

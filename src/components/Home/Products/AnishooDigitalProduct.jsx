@@ -4,54 +4,67 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow"; // افکت Coverflow اگر خواستی
 import { useEffect, useState } from "react";
+import ShowImageStatic from "@/utils/ShowImageStatic";
 
-const Card = ({ image, logo, title, price, isActive }) => {
+const Card = ({ ProductName, ProductEnglishName, ProductImage, ProductSmallIcon, isActive,Id }) => {
     return (
         <>
-        
-                <div
-            className={`bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-500 max-w-500:block hidden ${
-                isActive ? "scale-[100%]" : "scale-90 max-w-500:opacity-80"
-            }`}
-        >
-            <div className="relative">
-                <img src={image} alt={title} className="w-full h-48 object-cover" />
-            </div>
 
-            <div className="bg-gray-100 p-4 flex max-w-500:block  max-w-500:justify-items-center items-center gap-3" dir="rtl">
-                <img src={logo} alt="logo" className="w-10 h-10 " />
-                <div>
-                    <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-                    <p className="text-gray-600 text-sm">
-                        شروع قیمت از <span className="font-bold">{price}</span>
-                    </p>
+            <div
+                className={`bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-500 max-w-500:block hidden ${isActive ? "scale-[100%]" : "scale-90 max-w-500:opacity-80"
+                    }`}
+            >
+                <div className="relative">
+                    <ShowImageStatic image={ProductImage}  classImage="w-full h-48 object-cover" />
+                </div>
+
+                <div className="bg-gray-100 p-4 flex max-w-500:block  max-w-500:justify-items-center items-center gap-3" dir="rtl">
+                    <ShowImageStatic image={ProductImage} alt="logo" className="w-10 h-10 " />
+                    <div>
+                        <h3 className="text-xl font-bold text-gray-800">{ProductName}</h3>
+                        <p className="text-gray-600 text-sm">
+                           <span className="font-bold">{ProductEnglishName}</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        
 
-        <div className="bg-white rounded-2xl overflow-hidden shadow-md max-w-500:hidden">
-            {/* تصویر اصلی */}
-            <div className="relative">
-                <img src={image} alt={title} className="w-full h-48 object-cover" />
-            </div>
 
-            {/* اطلاعات کارت */}
-            <div className="bg-gray-100 p-4 flex items-center gap-3" dir="rtl">
-                <img src={logo} alt="logo" className="w-10 h-10" />
-                <div >
-                    <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-                    <p className="text-gray-600 text-sm">شروع قیمت از <span className="font-bold">{price}</span></p>
+            <div  className="bg-white rounded-2xl overflow-hidden shadow-md max-w-500:hidden group">
+                <a href={"/p/" + Id + "/" + ProductEnglishName.replace(/ /g, "-")}>
+
+      {/* تصویر اصلی */}
+                <div className="relative">
+                    <ShowImageStatic image={ProductImage}  className="w-full h-48 object-cover" />
+
+                    {/* افکت شیشه‌ای و لوگو وسط عکس هنگام هاور */}
+                    <div className="absolute inset-0 bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <img src="/assets/img/netflix.png" alt="overlay logo" className="w-32 " />
+                    </div>
                 </div>
+
+                {/* اطلاعات کارت */}
+                <div className="bg-gray-100 p-4 flex items-center gap-3" dir="rtl">
+                    <ShowImageStatic image={ProductImage} alt="logo" classImage="w-10 h-10" />
+                    <div>
+                        <h3 className="text-xl font-bold text-gray-800">{ProductName}</h3>
+                        <p className="text-gray-600 text-sm">
+                            <span className="font-bold">{ProductEnglishName}</span>
+                        </p>
+                    </div>
+                </div>
+
+                </a>
+          
             </div>
-        </div>
-        
+
+
         </>
 
     );
 };
 
-const AnishooDigitalProduct = () => {
+const AnishooDigitalProduct =  ({ products }) => {
     const cards = [
         {
             image: "/img/ye.jpg",
@@ -132,8 +145,8 @@ const AnishooDigitalProduct = () => {
             }}
             className="my-5"
         >
-            {cards.map((card, index) => (
-                <SwiperSlide key={index}>
+            {products.map((card, index) => (
+                <SwiperSlide key={index} >
                     <Card {...card} isActive={index === activeIndex} />
                 </SwiperSlide>
             ))}

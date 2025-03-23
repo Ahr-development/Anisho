@@ -1,4 +1,5 @@
 import GetProductServer from "@/components/ServerComponent/Product/GetProductServer";
+import NewServerProduct from "@/components/ServerComponent/Product/NewServerProduct";
 import { GetProductByIdService } from "@/data/Services/productService";
 
 export default async function ProductPage({ params }) {
@@ -9,8 +10,8 @@ export default async function ProductPage({ params }) {
         // دریافت محصول بر اساس آیدی
         const response = await GetProductByIdService(id);
         const product = response.data;
-
-        return <GetProductServer initialProduct={product} />;
+        console.log(product);
+        return <NewServerProduct initialProduct={product} />;
     } catch (error) {
         console.error("Failed to fetch product:", error);
 

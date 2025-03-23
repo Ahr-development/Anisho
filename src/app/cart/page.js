@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { GetUserCartAction } from '@/data/Actions/PaymentActions';
 import ShowImageStatic from '@/utils/ShowImageStatic';
+import NewNavbar from '@/components/Home/Contents/MainDesign/NewNavbar';
+import NewFooter from '@/components/Home/Contents/MainDesign/NewFooter';
 
 const Cart = () => {
   const user = useSelector((state) => state.IUser);
@@ -43,12 +45,11 @@ const Cart = () => {
 
   return (
     <>
-      <Navbar />
+      <NewNavbar />
 
-      <section className="bg-white py-8 antialiased  md:py-12">
+      <section className="bg-white py-8 antialiased  md:py-12 mb-40">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-          <h2 className="text-3xl font-semibold text-gray-900 text-center">سبد خرید شما</h2>
-          <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8" dir="rtl">
+          <div className="sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8" dir="rtl">
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
               <div className="space-y-6">
                 {cart !== null ? (
@@ -213,7 +214,7 @@ const Cart = () => {
 
                   <button
                     type="submit"
-                    className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 "
+                    className="flex w-full items-center justify-center rounded-lg bg-green-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 "
                   >
                     اعمال تخفیف
                   </button>
@@ -224,7 +225,7 @@ const Cart = () => {
         </div>
       </section>
 
-      <Footer />
+      <NewFooter />
     </>
   );
 };

@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ShoppingCart, Menu } from "lucide-react";
+import SignIn from "@/app/signin/page";
 
 
 const NewNavbar = () => {
@@ -158,6 +159,8 @@ const NewNavbar = () => {
             </div>
 
     
+
+    <SignIn/>
     
     </> );
 }
