@@ -43,6 +43,7 @@ module.exports = {
         'max-w-1088': { 'raw': '(max-width: 1088px)' },
         'max-w-1110': { 'raw': '(max-width: 1110px)' },
         'max-w-1010': { 'raw': '(max-width: 1010px)' },
+        'max-w-1023': { 'raw': '(max-width: 1023px)' },
 
         'max-w-967': { 'raw': '(max-width: 967px)' },
 

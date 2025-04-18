@@ -54,6 +54,7 @@ const NewServerProduct = ({ initialProduct }) => {
     useEffect(() => {
         const totalPrice = (Number(subscriptionPlan?.FieldPriceIRR) || 0) + (Number(timePlan?.FieldPriceIRR) || 0);
         setPrice(totalPrice);
+        console.log(initialProduct);
     }, [subscriptionPlan, timePlan]);
 
     useEffect(() => {
@@ -77,7 +78,7 @@ const NewServerProduct = ({ initialProduct }) => {
         <div className=" mt-6 pl-32 pr-32 max-w-1110:pl-16 max-w-1110:pr-16 max-w-850:pr-5 max-w-850:pl-5">
 
             <div className="grid grid-cols-4 max-w-530:grid-cols-1 gap-3">
-                <div className={` rounded-3xl  justify-items-center h-[250px] max-w-530:hidden bg-${initialProduct.Color}-100` }>
+                <div className={` rounded-3xl  justify-items-center h-[250px] max-w-530:hidden bg-${initialProduct.Color}-100`}>
                     <h3 className="text-2xl kalamehBold -mb-8 mt-5 max-w-640:-mb-5 "> روز</h3>
 
                     <h3 className="text-[110px] max-w-640:text-[80px] kalamehBold ">{timePlan.FieldName}</h3>
@@ -94,7 +95,7 @@ const NewServerProduct = ({ initialProduct }) => {
                     </button>
                 </div>
                 <div className={`col-span-2 bg-${initialProduct.Color}-100 h-[350px] max-w-480:mt-10 overflow-hidden justify-items-center rounded-3xl flex flex-col items-center relative`}>
-                    <img src="/assets/img/netflix.png" className="w-48 mt-12 z-10" />
+                    <ShowImageStatic image={initialProduct.ProductSmallIcon} classImage="w-48 mt-12 z-10" />
 
                     <div className="flex justify-center items-center relative w-full h-full">
                         <ShowImageStatic
@@ -259,6 +260,9 @@ const NewServerProduct = ({ initialProduct }) => {
         </div>
 
 
+        <div className="flex">
+            <div className="bg-stone-100"></div>
+        </div>
 
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-2xl backdrop-blur-md bg-white/30 border border-gray-200 shadow-xl rounded-2xl">
             <div className="flex items-center justify-between px-6 py-4">

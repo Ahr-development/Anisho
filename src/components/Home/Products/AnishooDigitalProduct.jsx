@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow"; // افکت Coverflow اگر خواستی
 import { useEffect, useState } from "react";
 import ShowImageStatic from "@/utils/ShowImageStatic";
 
-const Card = ({ ProductName, ProductEnglishName, ProductImage, ProductSmallIcon, isActive,Id }) => {
+const Card = ({ ProductName, ProductEnglishName, ProductImage, ProductSmallIcon,ProductIcon, isActive,Id }) => {
     return (
         <>
 
@@ -30,7 +30,7 @@ const Card = ({ ProductName, ProductEnglishName, ProductImage, ProductSmallIcon,
             </div>
 
 
-            <div  className="bg-white rounded-2xl overflow-hidden shadow-md max-w-500:hidden group">
+            <div  className="bg-white rounded-2xl overflow-hidden  max-w-500:hidden group">
                 <a href={"/p/" + Id + "/" + ProductEnglishName.replace(/ /g, "-")}>
 
       {/* تصویر اصلی */}
@@ -39,13 +39,13 @@ const Card = ({ ProductName, ProductEnglishName, ProductImage, ProductSmallIcon,
 
                     {/* افکت شیشه‌ای و لوگو وسط عکس هنگام هاور */}
                     <div className="absolute inset-0 bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <img src="/assets/img/netflix.png" alt="overlay logo" className="w-32 " />
+                        <ShowImageStatic image={ProductSmallIcon} alt="overlay logo" classImage="w-32 " />
                     </div>
                 </div>
 
                 {/* اطلاعات کارت */}
                 <div className="bg-gray-100 p-4 flex items-center gap-3" dir="rtl">
-                    <ShowImageStatic image={ProductImage} alt="logo" classImage="w-10 h-10" />
+                    <ShowImageStatic image={ProductIcon} alt="logo" classImage="w-10 h-10" />
                     <div>
                         <h3 className="text-xl font-bold text-gray-800">{ProductName}</h3>
                         <p className="text-gray-600 text-sm">

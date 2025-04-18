@@ -66,7 +66,7 @@ const NewFooter = () => {
             </div>
         </div>
 
-        <div className="justify-items-center items-center bg-gray-200 h-60 max-w-672:h-full -mt-16">
+        <div className="justify-items-center items-center bg-gray-200 h-60 max-w-767:h-full -mt-16">
             <img src="/assets/icon/icon.png" className="w-52 pt-16" />
             <ul class="text-xl flex items-center -mt-10  justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 ">
                 <li><a href="#" class="text-gray-800 hover:text-gray-900">درباره ما</a></li>
@@ -75,13 +75,13 @@ const NewFooter = () => {
                 <li><a href="#" class=" text-gray-800 hover:text-gray-900">حریم خصوصی</a></li>
                 <li><a href="#" class=" text-gray-800 hover:text-gray-900">پشتیبانی</a></li>
             </ul>
-            <div className=" ">
+            <div className="  max-w-767:-mt-10  max-w-767:hidden">
 
 
 
 
-                <ul class="flex justify-center -mb-10  space-x-5">
-                    <li className="mb-6 ">
+                <ul class="flex justify-center -mb-10   space-x-5">
+                    <li className="mb-6  ">
                         <a
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                         >
@@ -173,6 +173,34 @@ const NewFooter = () => {
 
             </div>
 
+        </div>
+
+
+        <div className="space-y-1 -mb-5 max-w-767:bg-gray-200 max-w-767:-mt-10 hidden max-w-767:block">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">
+                نماد اعتماد الکترونیکی
+            </h2>
+            <p className="text-lg text-gray-600 text-center">
+                ضمانت کننده اعتماد شما به تیم ماست
+            </p>
+        </div>
+
+
+        <div className="max-w-767:bg-gray-200" dir="rtl">
+            <div className="mx-auto max-w-7xl px-6 py-24  max-w-767:py-5 sm:py-20 lg:flex lg:items-center lg:justify-between lg:px-8">
+                <div className="space-y-4 max-w-1023:hidden">
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl max-w-420:text-center">
+                        نماد اعتماد الکترونیکی
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-420:text-center">
+                        ضمانت کننده اعتماد شما به تیم ماست
+                    </p>
+                </div>
+                <div className="mt-10 flex items-center justify-center lg:mt-0 lg:flex-shrink-0">
+                <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=600211&Code=HYHnOYv7LczoHoLBHZ5kJGx630cKAHJN'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=600211&Code=HYHnOYv7LczoHoLBHZ5kJGx630cKAHJN' alt=''  code='HYHnOYv7LczoHoLBHZ5kJGx630cKAHJN'/></a>
+          
+                </div>
+            </div>
         </div>
 
 

@@ -14,7 +14,7 @@ import { GetProductsForMainPageService } from "@/data/Services/productService";
 
 
 
-const NewMainPage = ({listProducts}) => {
+const NewMainPage = ({ listProducts }) => {
     const items = [
         {
             image: "/assets/img/github.png",
@@ -54,15 +54,15 @@ const NewMainPage = ({listProducts}) => {
 
         <div className="pt-3">
 
-   <NewNavbar/>
+            <NewNavbar />
 
             <div className="ml-32 mr-32 max-w-929:mr-5 max-w-929:ml-5 max-w-430:mt-20">
 
                 <HeroSectionSlider />
                 <MobileSectionSlider />
 
-                
-       
+
+
 
 
 
@@ -400,16 +400,23 @@ const NewMainPage = ({listProducts}) => {
                 <img src="/assets/img/gamemobile.png" className="-mt-48 max-w-1320:-mt-32 hidden max-w-1010:block max-w-1010:mt-0" />
 
                 <br />
-         
+
+
+
 
 
 
 
             </div>
 
-            <NewFooter/>
+
+
+
+
+
+            <NewFooter />
 
         </div>);
 }
- 
+
 export default NewMainPage;
